@@ -104,6 +104,7 @@ export function OverlayContainer(props: ModalProviderProps) {
     return () => {
       if (overlayId.current) {
         context?.removeOverlayItem(overlayId.current);
+        overlayId.current = undefined;
       }
     };
   }, []);
